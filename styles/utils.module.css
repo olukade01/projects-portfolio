@@ -1,0 +1,17 @@
+.black{
+  background-color: black;
+  border: none;
+  color: white;
+  /* @apply bg-black, border-0, text-white */
+}
+.white{
+  background-color: #fff;
+  border: 1px solid lightgray;
+  color: #1F2937;
+  /* @apply bg-transparent, border-solid, border-gray-50, border-2, text-black */
+}
+.width{
+  width: 45%;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
