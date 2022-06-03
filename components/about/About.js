@@ -1,3 +1,5 @@
+import AngleArrow from "../assets/AngleArrow";
+
 const langArray = [
   {
     name: "HTML",
@@ -43,7 +45,7 @@ const About = () => {
                 className="leading-8 flex items-center ml-2"
                 key={`langindex_${i}`}
               >
-                {lang.name}
+                <div className="mr-6">{<AngleArrow />}</div> {lang.name}
               </div>
             ))}
           </div>
@@ -54,6 +56,7 @@ const About = () => {
                 className="leading-8 flex items-center ml-2"
                 key={`langindex_${i}`}
               >
+                <div className="mr-6">{<AngleArrow />}</div>
                 {tech.name}
               </div>
             ))}

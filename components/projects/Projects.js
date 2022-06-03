@@ -1,4 +1,27 @@
 import Project from "./Project";
+import LeftArrow from "../assets/LeftArrow";
+import RightArrow from "../assets/RightArrow";
+
+const projectArray = [
+  {
+    img: "",
+    alt: "",
+    title: "Project Title",
+    desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
+  },
+  {
+    img: "",
+    alt: "",
+    title: "Project Title",
+    desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
+  },
+  {
+    img: "",
+    alt: "",
+    title: "Project Title",
+    desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
+  },
+];
 
 const Projects = () => {
   return (
@@ -9,26 +32,18 @@ const Projects = () => {
           Stuff I&#39;ve Worked On 📁
         </p>
         <div className="flex">
-          <div className="w-10 h-10 rounded-md justify-center items-center border border-gray-300"></div>
-          <div className="w-10 h-10 rounded-md justify-center items-center border border-gray-300 ml-4"></div>
+          <div className="w-10 h-10 rounded-md flex justify-center items-center border border-gray-300">
+            {<LeftArrow />}
+          </div>
+          <div className="w-10 h-10 rounded-md  justify-center items-center flex border border-gray-300 ml-4">
+            {<RightArrow />}
+          </div>
         </div>
       </div>
       <div className="flex overflow-x-scroll">
-        <Project
-          text1="Project Title"
-          text2="Fill your project brief here. It can be the outcome of the project, or
-        some success metrics, or a cheesy tagline."
-        />
-        <Project
-          text1="Project Title"
-          text2="Fill your project brief here. It can be the outcome of the project, or
-        some success metrics, or a cheesy tagline."
-        />
-        <Project
-          text1="Project Title"
-          text2="Fill your project brief here. It can be the outcome of the project, or
-        some success metrics, or a cheesy tagline."
-        />
+        {projectArray.map(({ title, desc }, index) => (
+          <Project key={index} text1={title} text2={desc} />
+        ))}
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import Button from "../Button";
 import Image from "next/image";
+import UpArrow from "../assets/UpArrow";
+import DownArrow from "../assets/DownArrow";
 
 const Introduction = () => {
   return (
@@ -15,13 +17,12 @@ const Introduction = () => {
           teknologi-teknologi terbaru.
         </p>
         <div className="flex">
-          <Button black text="Let's work together" />
-          <Button text="See some of my works" />
+          <Button icon iconn={<UpArrow />} black text="Let's work together" />
+          <Button icon iconn={<DownArrow />} text="See some of my works" />
         </div>
       </div>
-      <div className="">
+      <div>
         <Image
-          className=""
           width={100}
           height={100}
           src="/public/profilePic.jpg"

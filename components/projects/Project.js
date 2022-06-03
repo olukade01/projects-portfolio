@@ -4,7 +4,7 @@ import Button from "../Button";
 
 const Project = ({ alt, src, text1, text2 }) => {
   return (
-    <div className="min-h-fit min-w-fit p-4 rounded-md mr-2">
+    <div className="min-h-fit min-w-[450px] p-4 rounded-md mr-12">
       <div className="bg-grey rounded-md">
         {/* <Image width={50} height={50} alt={alt} src={src} /> */}
       </div>
