@@ -10,6 +10,10 @@
   color: #1F2937;
   /* @apply bg-transparent, border-solid, border-gray-50, border-2, text-black */
 }
+.neutral{
+  background-color: #F5F5F5;
+  border: none;
+}
 .width{
   width: 48%;
   margin-right: 24px;

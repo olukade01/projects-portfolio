@@ -40,7 +40,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="flex overflow-x-scroll">
+      <div className="flex overflow-x-auto w-[115%]">
         {projectArray.map(({ title, desc }, index) => (
           <Project key={index} text1={title} text2={desc} />
         ))}
