@@ -1,3 +1,5 @@
+import Mode from "../../public/assets/vectors/LightMode";
+
 const navOption = [{ title: "About" }, { title: "Work" }, { title: "Option" }];
 
 const Navigation = () => {
@@ -14,7 +16,9 @@ const Navigation = () => {
         <a>
           <span className="text-Tblack font-medium">Contact</span>
         </a>
-        <div className="ml-6 bg-[#E5E7EB] w-8 h-8 rounded flex items-center justify-center"></div>
+        <div className="ml-6 bg-[#E5E7EB] w-8 h-8 rounded flex items-center justify-center">
+          <Mode />
+        </div>
       </div>
     </div>
   );

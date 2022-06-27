@@ -1,4 +1,4 @@
-import AngleArrow from "../assets/AngleArrow";
+import AngleArrow from "../../public/assets/vectors/AngleArrow";
 
 const langArray = [
   {

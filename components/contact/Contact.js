@@ -1,25 +1,30 @@
 import Image from "next/image";
 import React from "react";
 import Button from "../Button";
-import Arrow from "../assets/DiagonalArrow";
+import Arrow from "../../public/assets/vectors/DiagonalArrow";
+import Github from "../../public/assets/vectors/Github";
+import Linkedin from "../../public/assets/vectors/LinkedIn";
+import Codepen from "../../public/assets/vectors/Codepen";
+import Twitter from "../../public/assets/vectors/Twitter";
+import Image1 from "../../public/assets/images/image1.png";
 const contactArray = [
   {
-    logo: <Arrow />,
+    logo: <Github />,
     name: "Github",
     icon: <Arrow />,
   },
   {
-    logo: <Arrow />,
+    logo: <Linkedin />,
     name: "Linkedin",
     icon: <Arrow />,
   },
   {
-    logo: <Arrow />,
+    logo: <Codepen />,
     name: "Codepen",
     icon: <Arrow />,
   },
   {
-    logo: <Arrow />,
+    logo: <Twitter />,
     name: "Twitter",
     icon: <Arrow />,
   },
@@ -37,12 +42,7 @@ const Contact = () => {
           <Button opacity font size text="adebayo0209@gmail.com" />
         </div>
         <div className="flex w-[152px] h-[152px] rounded-full justify-center items-center bg-opacity-50 bg-white">
-          <Image
-            width={50}
-            height={50}
-            src="/public/images/image.jpg"
-            alt="img"
-          />
+          <Image src={Image1} alt="img" />
         </div>
       </div>
       <div className="p-12">

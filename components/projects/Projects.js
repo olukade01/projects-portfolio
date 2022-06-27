@@ -1,23 +1,24 @@
 import Project from "./Project";
-import LeftArrow from "../assets/LeftArrow";
-import RightArrow from "../assets/RightArrow";
+import LeftArrow from "../../public/assets/vectors/LeftArrow";
+import RightArrow from "../../public/assets/vectors/RightArrow";
+import Projectpic from "../../public/assets/images/ProjectImage.png";
 
 const projectArray = [
   {
-    img: "",
-    alt: "",
+    img: Projectpic,
+    alt: "project-pic",
     title: "Project Title",
     desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
   },
   {
-    img: "",
-    alt: "",
+    img: Projectpic,
+    alt: "project-pic",
     title: "Project Title",
     desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
   },
   {
-    img: "",
-    alt: "",
+    img: Projectpic,
+    alt: "project-pic",
     title: "Project Title",
     desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
   },
@@ -36,13 +37,13 @@ const Projects = () => {
             {<LeftArrow />}
           </div>
           <div className="w-10 h-10 rounded-md  justify-center items-center flex border border-gray-300 ml-4">
-            {<RightArrow />}
+            {<RightArrow className="" />}
           </div>
         </div>
       </div>
       <div className="flex overflow-x-auto w-[115%]">
-        {projectArray.map(({ title, desc }, index) => (
-          <Project key={index} text1={title} text2={desc} />
+        {projectArray.map(({ title, desc, alt, img }, index) => (
+          <Project key={index} alt={alt} src={img} text1={title} text2={desc} />
         ))}
       </div>
     </div>
