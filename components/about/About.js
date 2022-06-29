@@ -25,8 +25,11 @@ const techArray = [
 
 const About = () => {
   return (
-    <div className="flex justify-center mb-52">
-      <div className="flex flex-col max-w-[600px]">
+    <div
+      id="about"
+      className="flex justify-center h-[762px] bg-about bg-no-repeat bg-cover bg-center"
+    >
+      <div className="flex flex-col mt-32 max-w-[600px]">
         <p className="text-lg">ABOUT ME</p>
         <p className="text-[40px] font-bold text-Tblack">A bit about me</p>
         <p className="text-lg mb-12 mt-5">
@@ -37,7 +40,7 @@ const About = () => {
           non. <br /> <br /> Pharetra purus quam mauris malesuada etiam nullam.
           Ultrices nec in massa consequat erat iaculis leo.{" "}
         </p>
-        <div className="flex">
+        <div className=" flex">
           <div className=" mr-16">
             <p className="font-bold text-2xl text-Tblack mb-6">Languages</p>
             {langArray.map((lang, i) => (

@@ -1,13 +1,11 @@
 import About from "../components/about/About";
 import Contact from "../components/contact/Contact";
 import Introduction from "../components/introduction/Introduction";
-import Navigation from "../components/navigation/Navigation";
 import Projects from "../components/projects/Projects";
 
 const index = () => {
   return (
-    <div className="px-[207px] pt-5">
-      <Navigation />
+    <div className="">
       <Introduction />
       <About />
       <Projects />
