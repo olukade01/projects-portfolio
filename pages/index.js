@@ -1,21 +1,29 @@
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 import About from "../components/about/About";
 import Contact from "../components/contact/Contact";
 import Introduction from "../components/introduction/Introduction";
 import Projects from "../components/projects/Projects";
 
-const index = () => {
+const Index = () => {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
   return (
-    <div className="">
-      <Introduction />
+    <div>
+      <Introduction setTheme={setTheme} theme={theme} />
       <About />
-      <Projects />
+      <Projects theme={theme} />
       <Contact />
-      <div className="flex justify-center items-center mb-3">
+      <footer className="flex justify-center dark:bg-footer py-2 items-center">
         <p className="text-sm mr-2">Copyright © 2022 </p>
-        <p className="font-bold text-Tblack"> OLUKADE MUZZAMMIL</p>
-      </div>
+        <p className="font-bold"> OLUKADE MUZZAMMIL</p>
+      </footer>
     </div>
   );
 };
 
-export default index;
+export default Index;

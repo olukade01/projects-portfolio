@@ -10,7 +10,7 @@ const SvgComponent = (props) => (
   >
     <path
       d="m11.004 3.414-8.607 8.607-1.414-1.414L9.589 2H2.004V0h11v11h-2V3.414Z"
-      fill="#F9FAFB"
+      fill={props.color || "#F9FAFB"}
     />
   </svg>
 );

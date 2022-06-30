@@ -5,17 +5,17 @@ import DownArrow from "../../public/assets/vectors/DownArrow";
 import ProfilePic from "../../public/assets/images/profilePic.jpg";
 import Navigation from "../navigation/Navigation";
 
-const Introduction = () => {
+const Introduction = ({ setTheme, theme }) => {
   return (
-    <div className="bg-intro bg-no-repeat bg-cover bg-center h-[754px]">
-      <Navigation />
+    <div className="bg-intro dark:bg-dark-intro bg-no-repeat bg-cover bg-center h-[754px]">
+      <Navigation setTheme={setTheme} theme={theme} />
       <div
         className=" mx-[207px]
       flex justify-between items-center bg-hero-pattern mt-[135px]
       "
       >
         <div className="">
-          <h1 className="text-Tblack leading-snug font-bold text-5xl">
+          <h1 className=" leading-snug font-bold text-5xl">
             Hi 👋
             <br /> I&apos;m Olukade Muzzammil
           </h1>
@@ -25,8 +25,25 @@ const Introduction = () => {
             teknologi-teknologi terbaru.
           </p>
           <div className="flex">
-            <Button icon iconn={<UpArrow />} black text="Let's work together" />
-            <Button icon iconn={<DownArrow />} text="See some of my works" />
+            <Button
+              icon
+              iconn={
+                theme === "light" ? <UpArrow /> : <UpArrow color="#1F2937" />
+              }
+              black
+              text="Let's work together"
+            />
+            <Button
+              icon
+              iconn={
+                theme === "light" ? (
+                  <DownArrow />
+                ) : (
+                  <DownArrow color="#F9FAFB" />
+                )
+              }
+              text="See some of my works"
+            />
           </div>
         </div>
         <div>

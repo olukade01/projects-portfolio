@@ -18,7 +18,7 @@ const Button = ({
     <button
       className={`${
         black
-          ? buttonStyle.black
+          ? "bg-black dark:bg-white border-none text-white dark:text-black"
           : neutral
           ? buttonStyle.neutral
           : buttonStyle.white

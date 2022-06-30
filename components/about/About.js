@@ -27,11 +27,11 @@ const About = () => {
   return (
     <div
       id="about"
-      className="flex justify-center h-[762px] bg-about bg-no-repeat bg-cover bg-center"
+      className="flex justify-center h-[762px] bg-about dark:bg-dark-about bg-no-repeat bg-cover bg-center"
     >
       <div className="flex flex-col mt-32 max-w-[600px]">
         <p className="text-lg">ABOUT ME</p>
-        <p className="text-[40px] font-bold text-Tblack">A bit about me</p>
+        <p className="text-[40px] font-bold">A bit about me</p>
         <p className="text-lg mb-12 mt-5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet
           nunc ultrices ac mauris, quis erat consequat odio. Pretium aliquet
@@ -42,7 +42,7 @@ const About = () => {
         </p>
         <div className=" flex">
           <div className=" mr-16">
-            <p className="font-bold text-2xl text-Tblack mb-6">Languages</p>
+            <p className="font-bold text-2xl mb-6">Languages</p>
             {langArray.map((lang, i) => (
               <div
                 className="leading-8 flex items-center ml-2"
@@ -53,7 +53,7 @@ const About = () => {
             ))}
           </div>
           <div>
-            <p className="font-bold text-2xl text-Tblack mb-6">Technologies</p>
+            <p className="font-bold text-2xl mb-6">Technologies</p>
             {techArray.map((tech, i) => (
               <div
                 className="leading-8 flex items-center ml-2"

@@ -24,24 +24,26 @@ const projectArray = [
   },
 ];
 
-const Projects = () => {
+const Projects = ({ theme }) => {
   return (
     <div
       id="projects"
-      className="bg-projects bg-no-repeat bg-cover bg-center h-[880px]"
+      className="bg-projects dark:bg-dark-projects bg-no-repeat bg-cover bg-center h-[880px]"
     >
       <div className="pt-20 mx-[207px]">
         <p className="text-lg">FEATURED PROJECTS</p>
         <div className="flex justify-between">
-          <p className="text-[40px] text-Tblack font-bold">
-            Stuff I&#39;ve Worked On 📁
-          </p>
+          <p className="text-[40px] font-bold">Stuff I&#39;ve Worked On 📁</p>
           <div className="flex">
             <div className="cursor-pointer w-10 h-10 rounded-md flex justify-center items-center border border-gray-300">
-              {<LeftArrow />}
+              {theme === "light" ? <LeftArrow /> : <LeftArrow color="white" />}
             </div>
             <div className="cursor-pointer w-10 h-10 rounded-md  justify-center items-center flex border border-gray-300 ml-4">
-              {<RightArrow className="" />}
+              {theme === "light" ? (
+                <RightArrow />
+              ) : (
+                <RightArrow color="white" />
+              )}
             </div>
           </div>
         </div>
