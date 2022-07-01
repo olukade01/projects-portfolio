@@ -13,11 +13,11 @@ const Index = () => {
 
   if (!mounted) return null;
   return (
-    <div>
+    <div className="w-full">
       <Introduction setTheme={setTheme} theme={theme} />
       <About />
       <Projects theme={theme} />
-      <Contact />
+      <Contact theme={theme} />
       <footer className="flex justify-center dark:bg-footer py-2 items-center">
         <p className="text-sm mr-2">Copyright © 2022 </p>
         <p className="font-bold"> OLUKADE MUZZAMMIL</p>

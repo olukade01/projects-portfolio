@@ -19,31 +19,36 @@ const Introduction = ({ setTheme, theme }) => {
             Hi 👋
             <br /> I&apos;m Olukade Muzzammil
           </h1>
-          <p className=" max-w-lg text-xl mt-8 mb-12">
+          <p className="max-w-lg text-xl mt-8 mb-12">
             Passionate di bidang Frontend Dev dan UI/UX Design. Suka membangun
             antarmuka website yang fast-performace dan well-design menggunakan
             teknologi-teknologi terbaru.
           </p>
           <div className="flex">
-            <Button
-              icon
-              iconn={
-                theme === "light" ? <UpArrow /> : <UpArrow color="#1F2937" />
-              }
-              black
-              text="Let's work together"
-            />
-            <Button
-              icon
-              iconn={
-                theme === "light" ? (
-                  <DownArrow />
-                ) : (
-                  <DownArrow color="#F9FAFB" />
-                )
-              }
-              text="See some of my works"
-            />
+            <a href="#contact" className="w-[235px]">
+              <Button
+                icon
+                iconn={
+                  theme === "light" ? <UpArrow /> : <UpArrow color="#1F2937" />
+                }
+                black
+                text="Let's work together"
+              />
+            </a>
+            <a href="#projects" className="w-[260px]">
+              <Button
+                icon
+                bg
+                iconn={
+                  theme === "light" ? (
+                    <DownArrow />
+                  ) : (
+                    <DownArrow color="#F9FAFB" />
+                  )
+                }
+                text="See some of my works"
+              />
+            </a>
           </div>
         </div>
         <div>

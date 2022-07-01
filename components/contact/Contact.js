@@ -10,27 +10,31 @@ import Image1 from "../../public/assets/images/image1.png";
 const contactArray = [
   {
     logo: <Github />,
+    darkLogo: <Github color="white" />,
     name: "Github",
     icon: <Arrow />,
   },
   {
     logo: <Linkedin />,
+    darkLogo: <Linkedin color="white" />,
     name: "Linkedin",
     icon: <Arrow />,
   },
   {
     logo: <Codepen />,
+    darkLogo: <Codepen color="white" />,
     name: "Codepen",
     icon: <Arrow />,
   },
   {
     logo: <Twitter />,
+    darkLogo: <Twitter color="white" />,
     name: "Twitter",
     icon: <Arrow />,
   },
 ];
 
-const Contact = () => {
+const Contact = ({ theme }) => {
   return (
     <div
       id="contact"
@@ -53,19 +57,34 @@ const Contact = () => {
         </div>
         <div className="p-12">
           <p className=" text-lg mb-2">SOCIALS</p>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap gap-10">
             {contactArray.map((contact, index) => (
-              <Button
+              <a
+                className="w-[588px]"
+                href={`${
+                  index === 0
+                    ? "https://github.com/olukade01"
+                    : index === 1
+                    ? "https://www.linkedin.com/in/olukade-muzzammil-111138192/"
+                    : index === 2
+                    ? "https://codepen.io/olukade"
+                    : "https://twitter.com/OlukadeM"
+                }`}
+                target="_blank"
+                rel="noreferrer"
                 key={`index_${index}`}
-                logo
-                icon
-                logoo={contact.logo}
-                iconn={contact.icon}
-                width
-                font
-                size
-                text={contact.name}
-              />
+              >
+                <Button
+                  logo
+                  icon
+                  logoo={theme === "light" ? contact.logo : contact.darkLogo}
+                  iconn={contact.icon}
+                  width
+                  font
+                  size
+                  text={contact.name}
+                />
+              </a>
             ))}
           </div>
         </div>

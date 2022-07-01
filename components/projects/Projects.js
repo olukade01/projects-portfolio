@@ -31,14 +31,14 @@ const Projects = ({ theme }) => {
       className="bg-projects dark:bg-dark-projects bg-no-repeat bg-cover bg-center h-[880px]"
     >
       <div className="pt-20 mx-[207px]">
-        <p className="text-lg">FEATURED PROJECTS</p>
+        <p className="text-lg dark:text-[#B9B9B9]">FEATURED PROJECTS</p>
         <div className="flex justify-between">
           <p className="text-[40px] font-bold">Stuff I&#39;ve Worked On 📁</p>
           <div className="flex">
-            <div className="cursor-pointer w-10 h-10 rounded-md flex justify-center items-center border border-gray-300">
+            <div className="cursor-pointer w-10 h-10 rounded-md flex justify-center items-center border border-gray-300 dark:border-[#4F4F4F]">
               {theme === "light" ? <LeftArrow /> : <LeftArrow color="white" />}
             </div>
-            <div className="cursor-pointer w-10 h-10 rounded-md  justify-center items-center flex border border-gray-300 ml-4">
+            <div className="cursor-pointer w-10 h-10 rounded-md  justify-center items-center flex border border-gray-300 dark:border-[#4F4F4F] ml-4">
               {theme === "light" ? (
                 <RightArrow />
               ) : (

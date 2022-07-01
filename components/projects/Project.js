@@ -11,7 +11,7 @@ const buttonTextArray = [
 const Project = ({ alt, src, text1, text2 }) => {
   return (
     <div className=" mt-12 border-2 border-[#E5E7EB] dark:border-[#313131] min-h-[400px] bg-project dark:bg-[#1F2937] min-w-[530px] p-6 rounded-[32px] mr-12">
-      <div className="mb-8 flex justify-center items-center bg-[#F5F5F5] opacity-80 min-h-[300px] rounded-[32px]">
+      <div className="mb-8 flex justify-center items-center bg-[#F5F5F5] opacity-80 min-h-[350px] rounded-[32px]">
         <Image alt={alt} src={src} />
       </div>
       <p className="font-medium text-2xl mb-4">{text1}</p>
