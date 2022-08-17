@@ -17,3 +17,45 @@
 .width{
   width: 100%;
 }
+
+.hamburger{
+  cursor: pointer;
+  position: relative;
+  width: 24px;
+  height: 17px;
+  transition: all 0.25s;
+}
+
+.hamburgerTop,
+.hamburgerMiddle,
+.hamburgerBottom{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.5s;
+  transform: rotate(0);
+}
+.hamburgerMiddle{
+  transform: translateY(7px);
+}
+.hamburgerBottom{
+  transform: translateY(14px);
+} 
+.open{
+  transform: rotate(90deg) 
+  /* translateY(0px) */
+}
+.open .hamburgerTop{
+  transform: rotate(45deg) 
+  translateY(6px) translate(6px) 
+} 
+.open .hamburgerMiddle{
+  display: none; 
+}  
+.open .hamburgerBottom{
+  transform: rotate(-45deg) 
+  translateY(6px) translate(-6px) 
+} 

@@ -40,7 +40,7 @@ const Contact = ({ theme }) => {
       id="contact"
       className="bg-contact dark:bg-dark-contact bg-no-repeat bg-cover h-[727px]"
     >
-      <div className="pt-28 mx-[207px]">
+      <div className="pt-28 mx-24 md:mx-[12.9rem]">
         <div className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] p-12 rounded-2xl flex items-center justify-between">
           <div>
             <p className="text-lg text-[#E5E7EB] dark:text-[#313131]">

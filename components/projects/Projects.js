@@ -2,14 +2,10 @@ import Project from "./Project";
 import LeftArrow from "../../public/assets/vectors/LeftArrow";
 import RightArrow from "../../public/assets/vectors/RightArrow";
 import Projectpic from "../../public/assets/images/ProjectImage.png";
-// import CarouselSlider from "react-carousel-slider";
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useRef } from "react";
-// import { useState } from "react";
 
 const projectArray = [
   {
@@ -52,32 +48,30 @@ const projectArray = [
 
 const Projects = ({ theme }) => {
   const ref = useRef();
-  // const [carouselEl, setCarouselEl] = useState({});
-  // const handleCarouselClick = (el) => setCarouselEl(el);
-  // const responsive = {
-  //   superLargeDesktop: {
-  //     breakpoint: { max: 4000, min: 3000 },
-  //     items: 3,
-  //   },
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 3,
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 2,
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 464, min: 0 },
-  //     items: 1,
-  //   },
-  // };
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <div
       id="projects"
       className="bg-projects dark:bg-dark-projects bg-no-repeat bg-cover bg-center h-[880px]"
     >
-      <div className="pt-20 mx-[207px]">
+      <div className="pt-20 mx-24 md:mx-[12.9rem]">
         <p className="text-lg dark:text-[#B9B9B9]">FEATURED PROJECTS</p>
         <div className="flex justify-between">
           <p className="text-[40px] font-bold">Stuff I&#39;ve Worked On 📁</p>
@@ -100,7 +94,7 @@ const Projects = ({ theme }) => {
             </div>
           </div>
         </div>
-        <div className=" w-[114%]">
+        <div className=" w-[115.5%]">
           {/* <Carousel
             ref={handleCarouselClick}
             swipeable={true}
@@ -113,8 +107,13 @@ const Projects = ({ theme }) => {
             responsive={responsive}
             // slidesToSlide={2}
           > */}
-          {/* <div className="flex"> */}
-          <Slider ref={ref} slidesToShow={3}>
+          <Slider
+            ref={ref}
+            // responsive={responsive}
+            arrows={false}
+            slidesToShow={1}
+            centerMode={true}
+          >
             {projectArray.map(({ title, desc, alt, img }, index) => (
               <Project
                 key={index}
@@ -125,7 +124,6 @@ const Projects = ({ theme }) => {
               />
             ))}
           </Slider>
-          {/* </div> */}
           {/* </Carousel> */}
         </div>
       </div>
