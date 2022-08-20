@@ -14,6 +14,7 @@ const Button = ({
   sfont,
   neutral,
   bg,
+  message,
 }) => {
   return (
     <button
@@ -23,19 +24,19 @@ const Button = ({
           : neutral
           ? "bg-[#f5f5f5] dark:bg-transparent dark:border dark:border-[#4F4F4F] py-[8px]"
           : "bg-transparent border border-gray-200 text-[#000] dark:text-white"
-      } ${width ? buttonStyle.width : "max-w-fit"} ${
+      } ${width ? buttonStyle.width : ""} ${
         opacity &&
         "bg-gray-200 dark:bg-[#1F2937] opacity-50 border border-[#fff]"
       } ${
         bg && "dark:border-[#4F4F4F]"
-      } hover:cursor-pointer px-6 py-3 rounded-lg mr-4`}
+      } hover:cursor-pointer px-6 py-3 rounded-lg flex gap-4 `}
     >
       <div className="flex items-center">
         {logo && <div className="mr-3">{logoo}</div>}
         <p
           className={`${font && "font-bold"} ${size && "text-2xl"} ${
             sm && "text-xs"
-          } ${sfont && "font-medium"} text-left grow`}
+          } ${message && "text-sm"} ${sfont && "font-medium"} text-left grow`}
         >
           {text}
         </p>

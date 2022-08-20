@@ -34,7 +34,6 @@
   left: 0;
   width: 24px;
   height: 2px;
-  background-color: #000;
   transition: all 0.5s;
   transform: rotate(0);
 }
@@ -46,7 +45,6 @@
 } 
 .open{
   transform: rotate(90deg) 
-  /* translateY(0px) */
 }
 .open .hamburgerTop{
   transform: rotate(45deg) 

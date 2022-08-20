@@ -6,7 +6,7 @@ import styles from "../../styles/utils.module.css";
 const Navigation = ({ setTheme, theme }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="container mx-auto p-6">
+    <nav className="md:container  md:mx-auto p-6 px-12 md:p-6">
       <div className="flex items-center justify-between">
         <div className="font-bold">OLUKADE MUZZAMMIL</div>
         <div className="flex items-center md:gap-8 gap-5">
@@ -27,20 +27,40 @@ const Navigation = ({ setTheme, theme }) => {
             } md:hidden focus:outline-none`}
             onClick={() => setIsOpen((prev) => !prev)}
           >
-            <span className={styles.hamburgerTop}></span>
-            <span className={styles.hamburgerMiddle}></span>
-            <span className={styles.hamburgerBottom}></span>
+            <span
+              className={`${styles.hamburgerTop} ${
+                theme === "light" ? "bg-black" : "bg-white"
+              }`}
+            ></span>
+            <span
+              className={`${styles.hamburgerMiddle} ${
+                theme === "light" ? "bg-black" : "bg-white"
+              }`}
+            ></span>
+            <span
+              className={`${styles.hamburgerBottom} ${
+                theme === "light" ? "bg-black" : "bg-white"
+              }`}
+            ></span>
           </button>
         </div>
       </div>
       <div
         className={`${
           isOpen ? "mr-0" : "-mr-64"
-        } md:hidden right-6 rounded-md top-0 space-y-6 flex flex-col items-center mt-16 fixed bg-gray-200 max-w-md font-bold p-5 px-8 z-10 transition-all duration-500 drop-shadow-lg`}
+        } md:hidden right-6 rounded-md top-0 space-y-6 flex flex-col items-center mt-20 fixed ${
+          theme === "light" ? "bg-white" : "bg-footer"
+        }  max-w-md font-bold p-5 px-8 z-10 transition-all duration-500 drop-shadow-sm`}
       >
-        <a href="#about">About</a>
-        <a href="#projects">Work</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" onClick={() => setIsOpen(false)}>
+          About
+        </a>
+        <a href="#projects" onClick={() => setIsOpen(false)}>
+          Work
+        </a>
+        <a href="#contact" onClick={() => setIsOpen(false)}>
+          Contact
+        </a>
       </div>
     </nav>
   );

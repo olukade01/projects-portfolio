@@ -38,29 +38,34 @@ const Contact = ({ theme }) => {
   return (
     <div
       id="contact"
-      className="bg-contact dark:bg-dark-contact bg-no-repeat bg-cover h-[727px]"
+      className="bg-contact dark:bg-dark-contact bg-no-repeat bg-cover h-[58rem]"
     >
-      <div className="pt-28 mx-24 md:mx-[12.9rem]">
-        <div className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] p-12 rounded-2xl flex items-center justify-between">
-          <div>
+      <div className="pt-28 container mx-auto">
+        <div className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] md:p-12 p-6 mx-3 rounded-2xl flex items-center justify-between">
+          <div className="">
             <p className="text-lg text-[#E5E7EB] dark:text-[#313131]">
               CONTACT
             </p>
             <p className="text-3xl font-bold text-white dark:text-[#1F2937] mb-6">
               Let work together
             </p>
-            <Button opacity font size text="adebayo0209@gmail.com" />
+            <div className="hidden sm:block">
+              <Button message opacity font size text="adebayo0209@gmail.com" />
+            </div>
+            <div className="sm:hidden">
+              <Button message opacity font size text="message" />
+            </div>
           </div>
-          <div className="flex w-[152px] h-[152px] rounded-full justify-center items-center bg-opacity-50 bg-white">
-            <Image src={Image1} alt="img" />
+          <div className=" p-4 rounded-full bg-opacity-50 bg-white">
+            <Image className="" src={Image1} alt="img" />
           </div>
         </div>
         <div className="p-12">
-          <p className=" text-lg mb-2">SOCIALS</p>
-          <div className="flex flex-wrap gap-10">
+          <p className="text-lg mb-2">SOCIALS</p>
+          <div className="md:flex bg-purple-300 gap-8">
             {contactArray.map((contact, index) => (
               <a
-                className="w-[588px]"
+                className=""
                 href={`${
                   index === 0
                     ? "https://github.com/olukade01"
