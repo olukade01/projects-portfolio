@@ -18,10 +18,10 @@ const Introduction = ({ theme }) => {
             antarmuka website yang fast-performace dan well-design menggunakan
             teknologi-teknologi terbaru.
           </p>
-          <div className="flex justify-between max-w-lg md:flex-row">
-            <a href="#contact" className="max-w-[50rem]">
+          <div className="flex sm:flex-row justify-between max-w-lg md:flex-col lg:flex-row">
+            <a href="#contact" className="mb-4 mr-2 text-sm md:text-[15px]">
               <Button
-                // width
+                className="w-[20rem]"
                 icon
                 iconn={
                   theme === "light" ? (
@@ -34,7 +34,7 @@ const Introduction = ({ theme }) => {
                 text="Let's work together"
               />
             </a>
-            <a href="#projects" className="">
+            <a href="#projects" className="text-sm md:text-[15px]">
               <Button
                 icon
                 bg
@@ -50,13 +50,8 @@ const Introduction = ({ theme }) => {
             </a>
           </div>
         </div>
-        <div className="">
-          <Image
-            className="rounded-full"
-            src={ProfilePic}
-            alt="profile pic"
-            // width={''}
-          />
+        <div className="w-[18rem] sm:w-[25rem]">
+          <Image className="rounded-full" src={ProfilePic} alt="profile pic" />
         </div>
       </div>
     </div>

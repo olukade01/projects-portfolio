@@ -3,9 +3,9 @@ import React from "react";
 import Button from "../Button";
 
 const buttonTextArray = [
-  { text: "Mobile App" },
-  { text: "Website" },
-  { text: "SaaS" },
+  { text: "Typescript" },
+  { text: "React" },
+  { text: "Tailwind" },
 ];
 
 const Project = ({ alt, src, text1, text2 }) => {
@@ -16,9 +16,14 @@ const Project = ({ alt, src, text1, text2 }) => {
       </div>
       <p className="font-medium text-2xl mb-4">{text1}</p>
       <p className="opacity-60 mb-4">{text2}</p>
-      <div className="flex">
+      <div className="flex overflow-x-scroll">
         {buttonTextArray.map(({ text }, index) => (
-          <Button key={index} neutral sm sfont text={text} />
+          <div
+            className="bg-[#e5e4e4] dark:bg-transparent dark:border dark:border-[#4F4F4F] p-2 rounded-lg mr-2 text-sm"
+            key={index}
+          >
+            {text}
+          </div>
         ))}
       </div>
     </div>

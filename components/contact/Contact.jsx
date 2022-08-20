@@ -38,7 +38,7 @@ const Contact = ({ theme }) => {
   return (
     <div
       id="contact"
-      className="bg-contact dark:bg-dark-contact bg-no-repeat bg-cover h-[58rem]"
+      className="bg-contact dark:bg-dark-contact bg-no-repeat bg-cover h-[55rem]"
     >
       <div className="pt-28 container mx-auto">
         <div className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] md:p-12 p-6 mx-3 rounded-2xl flex items-center justify-between">
@@ -62,7 +62,7 @@ const Contact = ({ theme }) => {
         </div>
         <div className="p-12">
           <p className="text-lg mb-2">SOCIALS</p>
-          <div className="md:flex bg-purple-300 gap-8">
+          <div className="md:flex gap-8">
             {contactArray.map((contact, index) => (
               <a
                 className=""

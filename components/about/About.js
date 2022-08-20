@@ -27,9 +27,9 @@ const About = () => {
   return (
     <div
       id="about"
-      className="flex justify-center h-[762px] bg-about dark:bg-dark-about bg-no-repeat bg-cover bg-center"
+      className="flex justify-center bg-about dark:bg-dark-about bg-no-repeat bg-cover bg-center"
     >
-      <div className="flex flex-col mt-32 container px-10 max-w-[50rem]">
+      <div className="flex flex-col mt-32 container pb-[12rem] px-10 max-w-[50rem]">
         <p className="text-lg dark:text-[#B9B9B9]">ABOUT ME</p>
         <p className="text-4xl md:5xl font-bold">A bit about me</p>
         <p className=" dark:text-[#B9B9B9] text-lg mb-12 mt-5">
@@ -40,8 +40,8 @@ const About = () => {
           non. <br /> <br /> Pharetra purus quam mauris malesuada etiam nullam.
           Ultrices nec in massa consequat erat iaculis leo.{" "}
         </p>
-        <div className="flex gap-6 md:gap-16">
-          <div className="">
+        <div className="flex gap-2 sm:gap-16">
+          <div>
             <p className="font-bold text-2xl mb-6">Languages</p>
             {langArray.map((lang, i) => (
               <div

@@ -36,7 +36,7 @@ const Button = ({
         <p
           className={`${font && "font-bold"} ${size && "text-2xl"} ${
             sm && "text-xs"
-          } ${message && "text-sm"} ${sfont && "font-medium"} text-left grow`}
+          } ${sfont && "font-medium"} text-left grow`}
         >
           {text}
         </p>
