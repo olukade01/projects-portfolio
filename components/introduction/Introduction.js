@@ -7,7 +7,7 @@ import ProfilePic from "../../public/assets/images/profilePic.jpg";
 const Introduction = ({ theme }) => {
   return (
     <div className="bg-intro dark:bg-dark-intro bg-no-repeat bg-cover bg-center ">
-      <div className="container mx-auto flex flex-col-reverse md:flex-row md:justify-between items-center pt-28 md:pt-40 pb-20 px-6 gap-16">
+      <div className="container mx-auto flex flex-col-reverse md:flex-row md:justify-between items-center pt-28 md:pt-40 pb-20 px-10 gap-16">
         <div className="flex flex-col md:w-1/2 space-y-10">
           <h1 className="md:leading-snug font-bold text-left text-4xl md:text-5xl">
             Hi 👋
@@ -24,11 +24,7 @@ const Introduction = ({ theme }) => {
                 className="w-[20rem]"
                 icon
                 iconn={
-                  theme === "light" ? (
-                    <UpArrow className="" />
-                  ) : (
-                    <UpArrow color="#1F2937" />
-                  )
+                  theme === "light" ? <UpArrow /> : <UpArrow color="#1F2937" />
                 }
                 black
                 text="Let's work together"

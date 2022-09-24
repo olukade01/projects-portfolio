@@ -7,7 +7,7 @@ import styles from "../../styles/utils.module.css";
 const Navigation = ({ setTheme, theme }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="md:container  md:mx-auto p-6 px-12 md:p-6">
+    <nav className="md:container md:mx-auto p-6 px-12 md:p-6 md:px-10">
       <div className="flex items-center justify-between">
         <div className="font-bold">OLUKADE MUZZAMMIL</div>
         <div className="flex items-center md:gap-8 gap-5">

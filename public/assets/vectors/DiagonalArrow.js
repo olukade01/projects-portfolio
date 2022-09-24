@@ -6,6 +6,7 @@ const SvgComponent = (props) => (
     height={13}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="translate-y-0.5 group-hover:translate-x-1.5 group-hover:-translate-y-1.5 transition-translate duration-300"
     {...props}
   >
     <path

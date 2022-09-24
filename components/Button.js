@@ -31,8 +31,8 @@ const Button = ({
         bg && "dark:border-[#4F4F4F]"
       } hover:cursor-pointer px-6 py-3 rounded-lg flex gap-4 `}
     >
-      <div className="flex items-center">
-        {logo && <div className="mr-3">{logoo}</div>}
+      <div className="flex group items-center w-full">
+        {logo && <div className="group-hover:animate-ping mr-3">{logoo}</div>}
         <p
           className={`${font && "font-bold"} ${size && "text-2xl"} ${
             sm && "text-xs"
