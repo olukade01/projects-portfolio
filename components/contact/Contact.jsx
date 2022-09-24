@@ -7,6 +7,16 @@ import Linkedin from "../../public/assets/vectors/LinkedIn";
 import Codepen from "../../public/assets/vectors/Codepen";
 import Twitter from "../../public/assets/vectors/Twitter";
 import Image1 from "../../public/assets/images/image1.png";
+import { motion } from "framer-motion";
+export const variant = {
+  hidden: { x: 90, opacity: 0 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1, ease: "easeInOut" },
+  },
+};
+
 const contactArray = [
   {
     logo: <Github />,
@@ -40,7 +50,12 @@ const Contact = ({ theme }) => {
       id="contact"
       className="bg-contact dark:bg-dark-contact bg-no-repeat bg-cover h-[55rem]"
     >
-      <div className="pt-28 md:px-12 container mx-auto">
+      <motion.div
+        initial="hidden"
+        variants={variant}
+        whileInView="visible"
+        className="pt-28 md:px-12 container mx-auto"
+      >
         <div className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] md:p-12 p-6 mx-3 rounded-2xl flex items-center justify-between">
           <div className="">
             <p className="text-lg text-[#E5E7EB] dark:text-[#313131]">
@@ -92,7 +107,7 @@ const Contact = ({ theme }) => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

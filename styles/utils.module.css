@@ -56,4 +56,15 @@
 .open .hamburgerBottom{
   transform: rotate(-45deg) 
   translateY(6px) translate(-6px) 
-} 
+}
+.image {
+  animation: rise 3s ease-in-out infinite alternate;
+}
+@keyframes rise {
+  0% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}

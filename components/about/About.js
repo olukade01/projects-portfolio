@@ -1,4 +1,13 @@
 import AngleArrow from "../../public/assets/vectors/AngleArrow";
+import { motion } from "framer-motion";
+export const variant = {
+  hidden: { y: 90, opacity: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: "easeInOut" },
+  },
+};
 
 const langArray = [
   {
@@ -29,7 +38,12 @@ const About = () => {
       id="about"
       className="flex justify-center bg-about dark:bg-dark-about bg-no-repeat bg-cover bg-center"
     >
-      <div className="flex flex-col mt-32 container pb-[12rem] px-10 max-w-[50rem]">
+      <motion.div
+        initial="hidden"
+        variants={variant}
+        whileInView="visible"
+        className="flex flex-col mt-32 container pb-[12rem] px-10 max-w-[50rem]"
+      >
         <p className="text-lg dark:text-[#B9B9B9]">ABOUT ME</p>
         <p className="text-4xl md:5xl font-bold">A bit about me</p>
         <p className=" dark:text-[#B9B9B9] text-lg mb-12 mt-5">
@@ -65,7 +79,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

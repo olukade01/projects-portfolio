@@ -6,7 +6,6 @@ const SvgComponent = (props) => (
     height={16}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="group-hover:translate-y-1.5  duration-300"
     {...props}
   >
     <path
