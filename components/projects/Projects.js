@@ -2,6 +2,7 @@ import Project from "./Project";
 import LeftArrow from "../../public/assets/vectors/LeftArrow";
 import RightArrow from "../../public/assets/vectors/RightArrow";
 import Projectpic from "../../public/assets/images/ProjectImage.png";
+import Hulupic from "../../public/assets/images/hulu.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,41 +10,43 @@ import { useRef } from "react";
 
 const projectArray = [
   {
-    img: Projectpic,
-    alt: "project-pic",
-    title: "Project Title",
+    img: Hulupic,
+    alt: "Movie App",
+    title: "Movie App",
     desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
+    techStack: [{ text: "NextJs" }, { text: "React" }, { text: "Tailwind" }],
+    href: "https://movie-app-dun-kappa.vercel.app/",
   },
-  {
-    img: Projectpic,
-    alt: "project-pic",
-    title: "Project Title",
-    desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
-  },
-  {
-    img: Projectpic,
-    alt: "project-pic",
-    title: "Project Title",
-    desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
-  },
-  {
-    img: Projectpic,
-    alt: "project-pic",
-    title: "Project Title",
-    desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
-  },
-  {
-    img: Projectpic,
-    alt: "project-pic",
-    title: "Project Title",
-    desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
-  },
-  {
-    img: Projectpic,
-    alt: "project-pic",
-    title: "Project",
-    desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
-  },
+  // {
+  //   img: Projectpic,
+  //   alt: "project-pic",
+  //   title: "Project Title",
+  //   desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
+  // },
+  // {
+  //   img: Projectpic,
+  //   alt: "project-pic",
+  //   title: "Project Title",
+  //   desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
+  // },
+  // {
+  //   img: Projectpic,
+  //   alt: "project-pic",
+  //   title: "Project Title",
+  //   desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
+  // },
+  // {
+  //   img: Projectpic,
+  //   alt: "project-pic",
+  //   title: "Project Title",
+  //   desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
+  // },
+  // {
+  //   img: Projectpic,
+  //   alt: "project-pic",
+  //   title: "Project",
+  //   desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
+  // },
 ];
 
 const Projects = ({ theme }) => {
@@ -55,7 +58,6 @@ const Projects = ({ theme }) => {
     slidesToScroll: 1,
     swipeToSlide: true,
     draggable: true,
-    // initialSlide: 0,
     arrows: false,
     responsive: [
       {
@@ -113,17 +115,20 @@ const Projects = ({ theme }) => {
         </div>
         <div className="mt-12">
           <Slider ref={ref} {...settings}>
-            {projectArray.map(({ title, desc, alt, img }, index) => (
-              <Project
-                key={index}
-                alt={alt}
-                src={img}
-                text1={title}
-                text2={desc}
-              />
-            ))}
+            {projectArray.map(
+              ({ title, desc, alt, img, techStack, href }, index) => (
+                <Project
+                  key={index}
+                  alt={alt}
+                  src={img}
+                  text1={title}
+                  text2={desc}
+                  technologyArray={techStack}
+                  href={href}
+                />
+              )
+            )}
           </Slider>
-          {/* </Carousel> */}
         </div>
       </div>
     </div>
