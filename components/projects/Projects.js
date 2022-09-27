@@ -13,8 +13,8 @@ const projectArray = [
     img: Hulupic,
     alt: "Movie App",
     title: "Movie App",
-    desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
-    techStack: [{ text: "NextJs" }, { text: "React" }, { text: "Tailwind" }],
+    desc: "Movie app is a site for searching any movie, watching its trailer, viewing its details and seeing related movies",
+    techStack: ["NextJs", "TailwindCss"],
     href: "https://movie-app-dun-kappa.vercel.app/",
   },
   // {

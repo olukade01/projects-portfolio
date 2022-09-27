@@ -9,27 +9,34 @@ export const variant = {
   },
 };
 
-const langArray = [
-  {
-    name: "HTML",
-  },
-  {
-    name: "CSS",
-  },
-  {
-    name: "JAVASCRIPT",
-  },
-];
+// const langArray = [];
 const techArray = [
-  {
-    name: "REACT",
-  },
-  {
-    name: "NODE",
-  },
-  {
-    name: "EXPRESS",
-  },
+  "HTML5 & (S)CSS",
+  "Javascript(ES6+)",
+  "React Native",
+  "Reactjs",
+  "TypeScript",
+  "Nextjs",
+  "Nodejs",
+  "Express",
+  "Redux",
+  "Simpler State",
+  "Mongoose",
+  "graphQl",
+];
+const toolsArray = [
+  "VsCode",
+  "Git",
+  "Github",
+  "Gitlab",
+  "Firebase",
+  "Vercel",
+  "Netlify",
+  "Expo",
+  "Heroku",
+  "Trello",
+  "Tailwindcss",
+  "StyledComponent",
 ];
 
 const About = () => {
@@ -47,34 +54,49 @@ const About = () => {
         <p className="text-lg dark:text-[#B9B9B9]">ABOUT ME</p>
         <p className="text-4xl md:5xl font-bold">A bit about me</p>
         <p className=" dark:text-[#B9B9B9] text-lg mb-12 mt-5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet
-          nunc ultrices ac mauris, quis erat consequat odio. Pretium aliquet
-          nunc eget consectetur diam felis justo. Tempor ornare nunc facilisi
-          amet. Sed dui orci, ut pharetra. Vulputate id lectus laoreet sagittis
-          non. <br /> <br /> Pharetra purus quam mauris malesuada etiam nullam.
-          Ultrices nec in massa consequat erat iaculis leo.{" "}
+          I am a Frontend Software Engineer with 2 years of experience
+          designing, developing, managing user interface and prioritizing user
+          experience. An enthusiastic team player that can efficiently
+          collaborate as part of a productive team and also able to effectively
+          self-manage during independent projects.
+          <br /> <br />
+          In my spare time I find ways to better optimize code and enjoy
+          learning new technologies.
         </p>
-        <div className="flex gap-2 sm:gap-16">
-          <div>
+        <div className="flex justify-between sm:justify-around gap-y-8 flex-wrap gap-1">
+          {/* <div>
             <p className="font-bold text-2xl mb-6">Languages</p>
             {langArray.map((lang, i) => (
               <div
                 className="leading-8 flex items-center ml-2"
                 key={`langindex_${i}`}
               >
-                <div className="mr-6">{<AngleArrow />}</div> {lang.name}
+                <div className="mr-4">{<AngleArrow />}</div>{" "}
+                {lang.toUpperCase()}
               </div>
             ))}
-          </div>
+          </div> */}
           <div>
             <p className="font-bold text-2xl mb-6">Technologies</p>
             {techArray.map((tech, i) => (
               <div
-                className="leading-8 flex items-center ml-2"
+                className="leading-8 flex items-center "
                 key={`langindex_${i}`}
               >
-                <div className="mr-6">{<AngleArrow />}</div>
-                {tech.name}
+                <div className="mr-4">{<AngleArrow />}</div>
+                {tech}
+              </div>
+            ))}
+          </div>
+          <div>
+            <p className="font-bold text-2xl mb-6">Tools</p>
+            {toolsArray.map((tool, i) => (
+              <div
+                className="leading-8 flex items-center"
+                key={`langindex_${i}`}
+              >
+                <div className="mr-4">{<AngleArrow />}</div>
+                {tool}
               </div>
             ))}
           </div>

@@ -45,6 +45,7 @@ const contactArray = [
 ];
 
 const Contact = ({ theme }) => {
+  const email = "adebayo0209@gmail.com";
   return (
     <div
       id="contact"
@@ -65,10 +66,14 @@ const Contact = ({ theme }) => {
               Let work together
             </p>
             <div className="hidden sm:block">
-              <Button message opacity font size text="adebayo0209@gmail.com" />
+              <a href={`mailto:${email}`}>
+                <Button message opacity font size text={email} />
+              </a>
             </div>
             <div className="sm:hidden">
-              <Button message opacity font size text="message" />
+              <a href={`mailto:${email}`}>
+                <Button message opacity font size text="message" />
+              </a>
             </div>
           </div>
           <div className="p-4 rounded-full bg-opacity-50 bg-white">

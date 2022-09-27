@@ -58,13 +58,13 @@
   translateY(6px) translate(-6px) 
 }
 .image {
-  animation: rise 3s ease-in-out infinite alternate;
+  animation: rise 2.5s ease-in-out infinite alternate;
 }
 @keyframes rise {
   0% {
-    transform: translateX(10px);
+    transform: translateY(20px);
   }
   100% {
-    transform: translateX(-10px);
+    transform: translateY(-20px);
   }
 }

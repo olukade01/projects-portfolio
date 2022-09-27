@@ -29,9 +29,10 @@ const Introduction = ({ theme }) => {
             <br /> I&apos;m Olukade Muzzammil
           </h1>
           <p className="max-w-xl">
-            Passionate di bidang Frontend Dev dan UI/UX Design. Suka membangun
-            antarmuka website yang fast-performace dan well-design menggunakan
-            teknologi-teknologi terbaru.
+            I Specialize on Javascript, ReactJS, Nextjs, web animation and
+            responsive design. If you have a Cool Project in mind, need an
+            online presence for your business or you are looking to hire, you
+            can get in touch with me.
           </p>
           <div className="flex sm:flex-row justify-between max-w-lg md:flex-col lg:flex-row">
             <a href="#contact" className="mb-4 mr-2 text-sm md:text-[15px]">
@@ -71,10 +72,11 @@ const Introduction = ({ theme }) => {
             </a>
           </div>
         </motion.div>
-        <div className="w-[18rem] sm:w-[25rem]">
-          <Image
-            className={`${styled.image} rounded-full drop-shadow-[0_1.6px_16px_rgba(53,71,87,0.15)]`}
-            src={ProfilePic}
+        <div className="w-[18rem] sm:w-[28rem]">
+          <img
+            className={`${styled.image} rounded-full`}
+            src="http://www.diginextechnologies.com/images/creative_graphic_designing_company_ludhiana_punjab_india.gif"
+            // src="/assets/images/profilePic.jpg"
             alt="profile pic"
           />
         </div>
