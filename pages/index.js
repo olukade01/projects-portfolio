@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <div className="flex bg-projects dark:bg-dark-projects h-screen overflow-hidden flex-col">
       <Navigation setTheme={setTheme} theme={theme} />
-      <div className="overflow-auto overflow-x-hidden">
+      <div className="overflow-auto ">
         <Introduction theme={theme} />
         <About />
         <Projects theme={theme} />
