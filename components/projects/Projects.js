@@ -1,7 +1,8 @@
 import Project from "./Project";
 import LeftArrow from "../../public/assets/vectors/LeftArrow";
 import RightArrow from "../../public/assets/vectors/RightArrow";
-import Projectpic from "../../public/assets/images/ProjectImage.png";
+import lawparlance from "../../public/assets/images/lawparlance.png";
+import Karasey from "../../public/assets/images/karasey.png";
 import Hulupic from "../../public/assets/images/hulu.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -10,25 +11,30 @@ import { useRef } from "react";
 
 const projectArray = [
   {
+    img: Karasey,
+    alt: "project-pic",
+    title: "Karasey web app",
+    desc: "",
+    techStack: ["NextJs", "TypeScript", "TailwindCss"],
+    href: "https://karasey.com/en",
+  },
+  {
     img: Hulupic,
     alt: "Movie App",
     title: "Movie App",
-    desc: "Movie app is a site for searching any movie, watching its trailer, viewing its details and seeing related movies",
+    desc: "Movie app is a site for searching any movie, watching its trailer, viewing its details and seeing related movies.",
     techStack: ["NextJs", "TailwindCss"],
     href: "https://movie-app-dun-kappa.vercel.app/",
   },
-  // {
-  //   img: Projectpic,
-  //   alt: "project-pic",
-  //   title: "Project Title",
-  //   desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
-  // },
-  // {
-  //   img: Projectpic,
-  //   alt: "project-pic",
-  //   title: "Project Title",
-  //   desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
-  // },
+  {
+    img: lawparlance,
+    alt: "project-pic",
+    title: "Law Parlance",
+    desc: "Law Parlance is an all-in-one legal management tool for law practices",
+    techStack: ["ReactJs", "TypeScript", "TailwindCss"],
+    href: "https://www.lawparlance.com/",
+  },
+
   // {
   //   img: Projectpic,
   //   alt: "project-pic",

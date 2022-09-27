@@ -15,7 +15,7 @@ const Project = ({ alt, src, text1, text2, href, technologyArray }) => {
         </a>
       </div>
       <p className="font-medium text-2xl mb-4">{text1}</p>
-      <p className="opacity-60 mb-4">{text2}</p>
+      <p className="opacity-60 mb-4 h-[4rem]">{text2}</p>
       <div className="flex overflow-scroll">
         {technologyArray.map((text, index) => (
           <div
