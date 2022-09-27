@@ -25,7 +25,7 @@ const Introduction = ({ theme }) => {
           className="flex flex-col md:w-1/2 space-y-10"
         >
           <h1 className="md:leading-snug font-bold text-left text-4xl md:text-5xl">
-            i 👋
+            Hi 👋
             <br /> I&apos;m Olukade Muzzammil
           </h1>
           <p className="max-w-xl">
