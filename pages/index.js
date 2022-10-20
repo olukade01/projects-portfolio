@@ -1,10 +1,10 @@
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
-import About from "../components/about/About";
-import Contact from "../components/contact/Contact";
-import Introduction from "../components/introduction/Introduction";
-import Navigation from "../components/navigation/Navigation";
-import Projects from "../components/projects/Projects";
+import { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
+import About from '../components/about/About';
+import Contact from '../components/contact/Contact';
+import Introduction from '../components/introduction/Introduction';
+import Navigation from '../components/navigation/Navigation';
+import Projects from '../components/projects/Projects';
 
 const Index = () => {
   const { theme, setTheme } = useTheme();

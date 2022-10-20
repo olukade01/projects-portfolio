@@ -1,46 +1,49 @@
-import Project from "./Project";
-import LeftArrow from "../../public/assets/vectors/LeftArrow";
-import RightArrow from "../../public/assets/vectors/RightArrow";
-import lawparlance from "../../public/assets/images/lawparlance.png";
-import Karasey from "../../public/assets/images/karasey.png";
-import Hulupic from "../../public/assets/images/hulu.png";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useRef } from "react";
+import Project from './Project';
+import LeftArrow from '../../public/assets/vectors/LeftArrow';
+import RightArrow from '../../public/assets/vectors/RightArrow';
+import lawparlance from '../../public/assets/images/lawparlance.png';
+import Karasey from '../../public/assets/images/karasey.png';
+import ECommerce from '../../public/assets/images/e-commerce.png';
+import Hulupic from '../../public/assets/images/hulu.png';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useRef } from 'react';
 
 const projectArray = [
   {
     img: Karasey,
-    alt: "project-pic",
-    title: "Karasey web app",
-    desc: "",
-    techStack: ["NextJs", "TypeScript", "TailwindCss"],
-    href: "https://karasey.com/en",
+    alt: 'project-pic',
+    title: 'Karasey web app',
+    desc: '',
+    techStack: ['NextJs', 'TypeScript', 'TailwindCss'],
+    href: 'https://karasey.com/en',
   },
   {
     img: Hulupic,
-    alt: "Movie App",
-    title: "Movie App",
-    desc: "Movie app is a site for searching any movie, watching its trailer, viewing its details and seeing related movies.",
-    techStack: ["NextJs", "TailwindCss"],
-    href: "https://movie-app-dun-kappa.vercel.app/",
+    alt: 'Movie App',
+    title: 'Movie App',
+    desc: 'Movie app is a site for searching any movie, watching its trailer, viewing its details and seeing related movies.',
+    techStack: ['NextJs', 'TailwindCss'],
+    href: 'https://movie-app-dun-kappa.vercel.app/',
   },
   {
     img: lawparlance,
-    alt: "project-pic",
-    title: "Law Parlance",
-    desc: "Law Parlance is an all-in-one legal management tool for law practices",
-    techStack: ["ReactJs", "TypeScript", "TailwindCss"],
-    href: "https://www.lawparlance.com/",
+    alt: 'project-pic',
+    title: 'Law Parlance',
+    desc: 'Law Parlance is an all-in-one legal management tool for law practices',
+    techStack: ['ReactJs', 'TypeScript', 'TailwindCss'],
+    href: 'https://www.lawparlance.com/',
   },
 
-  // {
-  //   img: Projectpic,
-  //   alt: "project-pic",
-  //   title: "Project Title",
-  //   desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
-  // },
+  {
+    img: ECommerce,
+    alt: 'project-pic',
+    title: 'Muzz Store',
+    desc: 'An E-Commerce platform for ordering and paying for goods and sellers can list goods',
+    techStack: ['NextJs', 'MUI', 'TailwindCss', 'Sanity'],
+    href: 'https://muz-store.vercel.app/',
+  },
   // {
   //   img: Projectpic,
   //   alt: "project-pic",
@@ -105,13 +108,13 @@ const Projects = ({ theme }) => {
               className="cursor-pointer w-10 h-10 rounded-md flex justify-center items-center border border-gray-300 dark:border-[#4F4F4F]"
               onClick={() => ref.current.slickPrev()}
             >
-              {theme === "light" ? <LeftArrow /> : <LeftArrow color="white" />}
+              {theme === 'light' ? <LeftArrow /> : <LeftArrow color="white" />}
             </div>
             <div
               className="cursor-pointer w-10 h-10 rounded-md  justify-center items-center flex border border-gray-300 dark:border-[#4F4F4F] ml-4"
               onClick={() => ref.current.slickNext()}
             >
-              {theme === "light" ? (
+              {theme === 'light' ? (
                 <RightArrow />
               ) : (
                 <RightArrow color="white" />
