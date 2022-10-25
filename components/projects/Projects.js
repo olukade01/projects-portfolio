@@ -11,14 +11,14 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useRef } from 'react';
 
 const projectArray = [
-  {
-    img: Karasey,
-    alt: 'project-pic',
-    title: 'Karasey web app',
-    desc: '',
-    techStack: ['NextJs', 'TypeScript', 'TailwindCss'],
-    href: 'https://karasey.com/en',
-  },
+  // {
+  //   img: Karasey,
+  //   alt: 'project-pic',
+  //   title: 'Karasey web app',
+  //   desc: '',
+  //   techStack: ['NextJs', 'TypeScript', 'TailwindCss'],
+  //   href: 'https://karasey.com/en',
+  // },
   {
     img: Hulupic,
     alt: 'Movie App',
