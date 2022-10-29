@@ -11,14 +11,24 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useRef } from 'react';
 
 const projectArray = [
-  // {
-  //   img: Karasey,
-  //   alt: 'project-pic',
-  //   title: 'Karasey web app',
-  //   desc: '',
-  //   techStack: ['NextJs', 'TypeScript', 'TailwindCss'],
-  //   href: 'https://karasey.com/en',
-  // },
+  {
+    img: Karasey,
+    alt: 'project-pic',
+    title: 'Karasey web app',
+    desc: '',
+    techStack: [
+      'NextJs',
+      'TailwindCss',
+      'Node',
+      'Firebase',
+      'Express',
+      'MongoDB',
+      'Trello',
+      'AWS',
+      'Git',
+    ],
+    href: 'https://karasey.com/en',
+  },
   {
     img: Hulupic,
     alt: 'Movie App',
@@ -41,7 +51,16 @@ const projectArray = [
     alt: 'project-pic',
     title: 'Muzz Store',
     desc: 'An E-Commerce platform for ordering and paying for goods and sellers can list goods',
-    techStack: ['NextJs', 'MUI', 'TailwindCss', 'Sanity'],
+    techStack: [
+      'NextJs',
+      'MUI',
+      'TailwindCss',
+      'Sanity',
+      'PayPal',
+      'Redux',
+      'ContextAPI',
+      'Git',
+    ],
     href: 'https://muz-store.vercel.app/',
   },
   // {
