@@ -3,6 +3,10 @@ import LeftArrow from '../../public/assets/vectors/LeftArrow';
 import RightArrow from '../../public/assets/vectors/RightArrow';
 import lawparlance from '../../public/assets/images/lawparlance.png';
 import Karasey from '../../public/assets/images/karasey.png';
+import Hayak from '../../public/assets/images/Hayak1.png';
+import Away from '../../public/assets/images/Frame 8.png';
+import Appreciate from '../../public/assets/images/Appreciate.png';
+import Finbus from '../../public/assets/images/Finbus1.png';
 import ECommerce from '../../public/assets/images/e-commerce.png';
 import Hulupic from '../../public/assets/images/hulu.png';
 import Slider from 'react-slick';
@@ -11,6 +15,94 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useRef } from 'react';
 
 const projectArray = [
+  {
+    img: Away,
+    alt: 'project-pic',
+    title: 'Away Naija',
+    desc: 'A social app specifically for the Nigerian diaspora community around the world to connect and help each other grow.',
+    techStack: [
+      'ReactNative',
+      'TypeScript',
+      'Expo',
+      'Eas',
+      'Rest Api',
+      'StyledComponent',
+    ],
+    link1:
+      'https://play.google.com/store/apps/details?id=com.awaynaijaOrg.awaynaija',
+  },
+  {
+    img: Hayak,
+    alt: 'project-pic',
+    title: 'Hayak',
+    desc: 'Explore the beauty of Saudi Arabia through Hayak. Explore experiences, destinations and Saudi Arabian culture.',
+    techStack: [
+      'ReactNative',
+      'TypeScript',
+      'StyledComponent',
+      'Expo',
+      'Eas',
+      'Firebase',
+    ],
+    link: 'https://apps.apple.com/us/app/hayak-tourists-app/id1617651141',
+    link1:
+      'https://play.google.com/store/apps/details?id=com.starthub.hayakuserapp&pli=1',
+  },
+  {
+    img: lawparlance,
+    alt: 'project-pic',
+    title: 'Law Parlance',
+    desc: 'Law Parlance is an all-in-one legal management tool for law practices',
+    techStack: ['ReactJs', 'TypeScript', 'TailwindCss'],
+    href: 'https://www.lawparlance.com/',
+  },
+  {
+    img: ECommerce,
+    alt: 'project-pic',
+    title: 'Muzz Store',
+    desc: 'An E-Commerce platform for ordering and paying for goods and sellers can list goods',
+    techStack: [
+      'NextJs',
+      'MUI',
+      'TailwindCss',
+      'Sanity',
+      'PayPal',
+      'Redux',
+      'ContextAPI',
+      'Git',
+    ],
+    href: 'https://muz-store.vercel.app/',
+  },
+  {
+    img: Appreciate,
+    alt: 'project-pic',
+    title: 'Appreciate MVP',
+    desc: 'Appreciate is a Nigerian company that offers real estate investment services to clients',
+    techStack: ['NextJs', 'TailwindCss', 'Typescript', 'Mailchimp', 'Git'],
+    href: 'https://appreciate-mvp.vercel.app',
+  },
+  {
+    img: Finbus,
+    alt: 'project-pic',
+    title: 'Global Finbus',
+    desc: 'Global-Finbus is a website for accessing the skills and expertise of Bookkeepers, Controllers, and CPAs.',
+    techStack: [
+      'NextJs',
+      'TypeScript',
+      'TailwindCss',
+      'Sanity',
+      'Simpler-state',
+    ],
+    href: 'https://finbus-global.vercel.app',
+  },
+  {
+    img: Hulupic,
+    alt: 'Movie App',
+    title: 'Movie App',
+    desc: 'Movie app is a site for searching any movie, watching its trailer, viewing its details and seeing related movies.',
+    techStack: ['NextJs', 'TailwindCss'],
+    href: 'https://movie-app-dun-kappa.vercel.app/',
+  },
   {
     img: Karasey,
     alt: 'project-pic',
@@ -29,52 +121,6 @@ const projectArray = [
     ],
     href: 'https://karasey.com/en',
   },
-  {
-    img: Hulupic,
-    alt: 'Movie App',
-    title: 'Movie App',
-    desc: 'Movie app is a site for searching any movie, watching its trailer, viewing its details and seeing related movies.',
-    techStack: ['NextJs', 'TailwindCss'],
-    href: 'https://movie-app-dun-kappa.vercel.app/',
-  },
-  {
-    img: lawparlance,
-    alt: 'project-pic',
-    title: 'Law Parlance',
-    desc: 'Law Parlance is an all-in-one legal management tool for law practices',
-    techStack: ['ReactJs', 'TypeScript', 'TailwindCss'],
-    href: 'https://www.lawparlance.com/',
-  },
-
-  {
-    img: ECommerce,
-    alt: 'project-pic',
-    title: 'Muzz Store',
-    desc: 'An E-Commerce platform for ordering and paying for goods and sellers can list goods',
-    techStack: [
-      'NextJs',
-      'MUI',
-      'TailwindCss',
-      'Sanity',
-      'PayPal',
-      'Redux',
-      'ContextAPI',
-      'Git',
-    ],
-    href: 'https://muz-store.vercel.app/',
-  },
-  // {
-  //   img: Projectpic,
-  //   alt: "project-pic",
-  //   title: "Project Title",
-  //   desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
-  // },
-  // {
-  //   img: Projectpic,
-  //   alt: "project-pic",
-  //   title: "Project",
-  //   desc: "Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.",
-  // },
 ];
 
 const Projects = ({ theme }) => {
@@ -144,7 +190,10 @@ const Projects = ({ theme }) => {
         <div className="mt-12">
           <Slider ref={ref} {...settings}>
             {projectArray.map(
-              ({ title, desc, alt, img, techStack, href }, index) => (
+              (
+                { title, desc, alt, img, techStack, href, link, link1 },
+                index
+              ) => (
                 <Project
                   key={index}
                   alt={alt}
@@ -153,6 +202,10 @@ const Projects = ({ theme }) => {
                   text2={desc}
                   technologyArray={techStack}
                   href={href}
+                  mobile={index === 0 || index === 1}
+                  appStore={index === 1}
+                  link={link}
+                  link1={link1}
                 />
               )
             )}

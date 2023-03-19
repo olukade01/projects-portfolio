@@ -1,19 +1,19 @@
-import Image from "next/image";
-import React from "react";
-import Button from "../Button";
-import Arrow from "../../public/assets/vectors/DiagonalArrow";
-import Github from "../../public/assets/vectors/Github";
-import Linkedin from "../../public/assets/vectors/LinkedIn";
-import Codepen from "../../public/assets/vectors/Codepen";
-import Twitter from "../../public/assets/vectors/Twitter";
-import Image1 from "../../public/assets/images/image1.png";
-import { motion } from "framer-motion";
+import Image from 'next/image';
+import React from 'react';
+import Button from '../Button';
+import Arrow from '../../public/assets/vectors/DiagonalArrow';
+import Github from '../../public/assets/vectors/Github';
+import Linkedin from '../../public/assets/vectors/LinkedIn';
+import Codepen from '../../public/assets/vectors/Codepen';
+import Twitter from '../../public/assets/vectors/Twitter';
+import Image1 from '../../public/assets/images/image1.png';
+import { motion } from 'framer-motion';
 export const variant = {
   hidden: { x: 90, opacity: 0 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 1, ease: "easeInOut" },
+    transition: { duration: 1, ease: 'easeInOut' },
   },
 };
 
@@ -21,31 +21,31 @@ const contactArray = [
   {
     logo: <Github />,
     darkLogo: <Github color="white" />,
-    name: "Github",
+    name: 'Github',
     icon: <Arrow />,
   },
   {
     logo: <Linkedin />,
     darkLogo: <Linkedin color="white" />,
-    name: "Linkedin",
+    name: 'Linkedin',
     icon: <Arrow />,
   },
   {
     logo: <Codepen />,
     darkLogo: <Codepen color="white" />,
-    name: "Codepen",
+    name: 'Codepen',
     icon: <Arrow />,
   },
   {
     logo: <Twitter />,
     darkLogo: <Twitter color="white" />,
-    name: "Twitter",
+    name: 'Twitter',
     icon: <Arrow />,
   },
 ];
 
 const Contact = ({ theme }) => {
-  const email = "adebayo0209@gmail.com";
+  const email = 'adebayo0209@gmail.com';
   return (
     <div
       id="contact"
@@ -87,12 +87,12 @@ const Contact = ({ theme }) => {
               <a
                 href={`${
                   index === 0
-                    ? "https://github.com/olukade01"
+                    ? 'https://github.com/olukade01'
                     : index === 1
-                    ? "https://www.linkedin.com/in/olukade-muzzammil-111138192/"
+                    ? 'https://www.linkedin.com/in/olukade-muzzammil-111138192/'
                     : index === 2
-                    ? "https://codepen.io/olukade"
-                    : "https://twitter.com/OlukadeM"
+                    ? 'https://codepen.io/olukade'
+                    : 'https://twitter.com/OlukadeM'
                 }`}
                 target="_blank"
                 rel="noreferrer"
@@ -101,7 +101,7 @@ const Contact = ({ theme }) => {
                 <Button
                   logo
                   icon
-                  logoo={theme === "light" ? contact.logo : contact.darkLogo}
+                  logoo={theme === 'light' ? contact.logo : contact.darkLogo}
                   iconn={contact.icon}
                   width
                   font
