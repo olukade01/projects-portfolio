@@ -8,11 +8,11 @@ import Projects from '../components/projects/Projects';
 
 const Index = () => {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  // useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null;
+  // if (!mounted) return null;
   return (
     <div className="flex bg-projects dark:bg-dark-projects h-screen overflow-hidden flex-col">
       <Navigation setTheme={setTheme} theme={theme} />

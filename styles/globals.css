@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
 
 html,
 body {
@@ -19,12 +19,12 @@ a {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   height: 0;
   width: 0;
 }
-@media (max-width:750px) {
-  :root{
+@media (max-width: 750px) {
+  :root {
     font-size: 13px;
-  } 
+  }
 }

@@ -1,16 +1,16 @@
-import Button from "../Button";
-import Image from "next/image";
-import UpArrow from "../../public/assets/vectors/UpArrow";
-import DownArrow from "../../public/assets/vectors/DownArrow";
-import ProfilePic from "../../public/assets/images/profilePic.jpg";
-import styled from "../../styles/utils.module.css";
-import { motion } from "framer-motion";
+import Button from '../Button';
+import Image from 'next/image';
+import UpArrow from '../../public/assets/vectors/UpArrow';
+import DownArrow from '../../public/assets/vectors/DownArrow';
+import ProfilePic from '../../public/assets/images/profilePic.jpg';
+import styled from '../../styles/utils.module.css';
+import { motion } from 'framer-motion';
 export const variant = {
   hidden: { x: -90, opacity: 0 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 1, ease: "easeInOut" },
+    transition: { duration: 1, ease: 'easeInOut' },
   },
 };
 
@@ -40,7 +40,7 @@ const Introduction = ({ theme }) => {
                 className="w-[20rem]"
                 icon
                 iconn={
-                  theme === "light" ? (
+                  theme === 'light' ? (
                     <UpArrow className="group-hover:translate-x-1.5 group-hover:-translate-y-1.5 duration-300" />
                   ) : (
                     <UpArrow
@@ -58,7 +58,7 @@ const Introduction = ({ theme }) => {
                 icon
                 bg
                 iconn={
-                  theme === "light" ? (
+                  theme === 'light' ? (
                     <DownArrow className="group-hover:translate-y-1.5 duration-300" />
                   ) : (
                     <DownArrow
@@ -75,8 +75,8 @@ const Introduction = ({ theme }) => {
         <div className="w-[18rem] sm:w-[28rem]">
           <img
             className={`${styled.image} rounded-full`}
-            src="http://www.diginextechnologies.com/images/creative_graphic_designing_company_ludhiana_punjab_india.gif"
-            // src="/assets/images/profilePic.jpg"
+            // src="http://www.diginextechnologies.com/images/creative_graphic_designing_company_ludhiana_punjab_india.gif"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfbcreyzPXhUQ7h6ZdMrOFgcAzaNeRbkVLQg&usqp=CAU"
             alt="profile pic"
           />
         </div>
