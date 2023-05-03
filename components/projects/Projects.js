@@ -5,7 +5,7 @@ import lawparlance from '../../public/assets/images/lawparlance.png';
 import Karasey from '../../public/assets/images/karasey.png';
 import Hayak from '../../public/assets/images/Hayak1.png';
 import Away from '../../public/assets/images/Frame 8.png';
-import Appreciate from '../../public/assets/images/Appreciate.png';
+import Appreciate from '../../public/assets/images/NAppreciate.png';
 import Finbus from '../../public/assets/images/Finbus1.png';
 import ECommerce from '../../public/assets/images/e-commerce.png';
 import Hulupic from '../../public/assets/images/hulu.png';
@@ -28,6 +28,7 @@ const projectArray = [
       'Rest Api',
       'StyledComponent',
     ],
+    link: 'https://apps.apple.com/us/app/away-naija/id6446809515',
     link1:
       'https://play.google.com/store/apps/details?id=com.awaynaijaOrg.awaynaija',
   },
@@ -203,7 +204,6 @@ const Projects = ({ theme }) => {
                   technologyArray={techStack}
                   href={href}
                   mobile={index === 0 || index === 1}
-                  appStore={index === 1}
                   link={link}
                   link1={link1}
                 />
